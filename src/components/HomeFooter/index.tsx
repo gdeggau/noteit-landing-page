@@ -66,11 +66,9 @@ export const HomeFooter = () => {
           }}
           justify="center"
         >
-          <Text textStyle="Other/Gamja">{t('home.page.footer.top.draw')}</Text>
-          <Text textStyle="Other/Gamja">{t('home.page.footer.top.share')}</Text>
-          <Text textStyle="Other/Gamja">
-            {t('home.page.footer.top.have-fun')}
-          </Text>
+          <Text textStyle="Other/Gamja">{t('home.footer.top.draw')}</Text>
+          <Text textStyle="Other/Gamja">{t('home.footer.top.share')}</Text>
+          <Text textStyle="Other/Gamja">{t('home.footer.top.have-fun')}</Text>
         </HStack>
         <HStack>
           <PencilScribble transform={'scaleX(-1)'} />
@@ -89,10 +87,10 @@ export const HomeFooter = () => {
         bgColor="white"
       >
         <Link href={routes.privacyPolicy.path} textStyle="Title/Semibold">
-          {t('home.page.footer.bottom.privacy-policy')}
+          {t('home.footer.bottom.privacy-policy')}
         </Link>
         <Link href={routes.contactUs.path} textStyle="Title/Semibold">
-          {t('home.page.footer.bottom.contact-us')}
+          {t('home.footer.bottom.contact-us')}
         </Link>
       </HStack>
     </VStack>

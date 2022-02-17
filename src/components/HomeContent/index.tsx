@@ -25,7 +25,7 @@ export const HomeContent = () => {
             lg: 'start',
           }}
         >
-          {t('home.page.content.title')}
+          {t('home.content.title')}
         </Text>
         <VStack
           spacing={4}
@@ -35,20 +35,14 @@ export const HomeContent = () => {
             xl: '90%',
           }}
         >
-          <Text textStyle="Title/Regular">
-            {t('home.page.content.paragraph.1')}
-          </Text>
-          <Text textStyle="Title/Regular">
-            {t('home.page.content.paragraph.2')}
-          </Text>
-          <Text textStyle="Title/Regular">
-            {t('home.page.content.paragraph.3')}
-          </Text>
+          <Text textStyle="Title/Regular">{t('home.content.paragraph.1')}</Text>
+          <Text textStyle="Title/Regular">{t('home.content.paragraph.2')}</Text>
+          <Text textStyle="Title/Regular">{t('home.content.paragraph.3')}</Text>
         </VStack>
       </Stack>
       <Image
         src="/Screenshots.png"
-        alt={t('home.page.content.image.screenshots')}
+        alt={t('home.content.image.screenshots')}
         p={5}
       />
     </Stack>

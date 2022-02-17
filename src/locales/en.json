@@ -1,0 +1,31 @@
+{
+  "home": {
+    "banner": {
+      "share-notes": "Share notes",
+      "share-memories": "Share memories",
+      "image": { "iphone": "IPhone running Noteit" }
+    },
+    "content": {
+      "title": "Draw and write loving, cute and fun notes",
+      "paragraph": {
+        "1": "With more than one million downloads, Noteit is a new kind of relationship goals between partners and friends. This is because it allows the simultaneous and synchronous exchange of notes. Once installed, you immediately connect with your partner or friend through a code and that&apos;s it!",
+        "2": "You can also pin a widget to your home screen and see the note whenever you unlock your device.",
+        "3": "Enjoy! Express yourself using Noteit."
+      },
+      "image": {
+        "screenshots": "Screenshots from Noteit"
+      }
+    },
+    "footer": {
+      "top": {
+        "draw": "Draw",
+        "share": "Share",
+        "have-fun": "Have fun"
+      },
+      "bottom": {
+        "privacy-policy": "Privacy Policy",
+        "contact-us": "Contact Us"
+      }
+    }
+  }
+}

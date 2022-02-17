@@ -34,10 +34,10 @@ export const HomeBanner = () => {
           />
           <VStack align="flex-start" spacing={0}>
             <Text textStyle="LargeTitle/Semibold" color="white">
-              {t('home.page.banner.share-notes')}
+              {t('home.banner.share-notes')}
             </Text>
             <Text textStyle="LargeTitle/Semibold" color="white">
-              {t('home.page.banner.share-memories')}
+              {t('home.banner.share-memories')}
             </Text>
           </VStack>
           <HStack spacing={2}>
@@ -65,7 +65,7 @@ export const HomeBanner = () => {
         </VStack>
         <Image
           src="/iPhones.png"
-          alt={t('home.page.banner.image.iphone')}
+          alt={t('home.banner.image.iphone')}
           position="absolute"
           zIndex={1}
           // right={{

@@ -31,12 +31,18 @@ const theme = extendTheme({
 
   textStyles: {
     'LargeTitle/Regular': {
-      fontSize: ['14px', '27px'],
+      fontSize: {
+        base: '14px',
+        md: '27px',
+      },
       fontWeight: '400',
       // lineHeight: '100%',
     },
     'LargeTitle/Semibold': {
-      fontSize: ['14px', '27px'],
+      fontSize: {
+        base: '14px',
+        md: '27px',
+      },
       fontWeight: '600',
       // lineHeight: '100%',
     },
@@ -51,18 +57,29 @@ const theme = extendTheme({
       // lineHeight: '31px',
     },
     'Title/Regular': {
-      fontSize: ['13px', '17px'],
+      fontSize: {
+        base: '13px',
+        md: '17px',
+      },
+
       fontWeight: '400',
       // lineHeight: '25px',
     },
     'Title/Semibold': {
-      fontSize: ['13px', '17px'],
+      fontSize: {
+        base: '13px',
+        md: '17px',
+      },
+
       fontWeight: '600',
       // lineHeight: '25px',
     },
     'Other/Gamja': {
       fontFamily: 'Gamja Flower, cursive',
-      fontSize: '24px',
+      fontSize: {
+        base: '24px',
+        lg: '48px',
+      },
       fontWeight: '400',
       color: 'green.50',
     },

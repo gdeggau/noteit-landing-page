@@ -1,9 +1,12 @@
 import { Box, HStack, Image, Link, Text, VStack } from '@chakra-ui/react'
+import { useTranslation } from 'react-i18next'
 
 import { DrawLogoIcon, Logo1Icon } from '@components'
 import { store } from '@constants'
 
 export const HomeBanner = () => {
+  const { t } = useTranslation()
+
   return (
     <Box
       bg="primary"
@@ -31,10 +34,10 @@ export const HomeBanner = () => {
           />
           <VStack align="flex-start" spacing={0}>
             <Text textStyle="LargeTitle/Semibold" color="white">
-              Share notes
+              {t('home.page.banner.share-notes')}
             </Text>
             <Text textStyle="LargeTitle/Semibold" color="white">
-              Share memories
+              {t('home.page.banner.share-memories')}
             </Text>
           </VStack>
           <HStack spacing={2}>
@@ -62,7 +65,7 @@ export const HomeBanner = () => {
         </VStack>
         <Image
           src="/iPhones.png"
-          alt="IPhone running Noteit"
+          alt={t('home.page.banner.image.iphone')}
           position="absolute"
           zIndex={1}
           // right={{

@@ -1,6 +1,6 @@
-import { Container, Image, Stack, Text, VStack } from '@chakra-ui/react'
+import { Container, Stack } from '@chakra-ui/react'
 
-import { Footer, HomeBanner, HomeContent } from '@components'
+import { HomeBanner, HomeContent, HomeFooter } from '@components'
 
 const Home = () => {
   return (
@@ -12,12 +12,19 @@ const Home = () => {
           md: 20,
         }}
       >
-        <Stack spacing={[16, 24, 32, 52]}>
+        <Stack
+          spacing={{
+            base: 16,
+            sm: 20,
+            md: 24,
+            lg: 28,
+          }}
+        >
           <HomeBanner />
           <HomeContent />
         </Stack>
       </Container>
-      <Footer />
+      <HomeFooter />
     </>
   )
 }

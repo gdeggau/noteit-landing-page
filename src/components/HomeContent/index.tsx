@@ -1,19 +1,19 @@
 import { Image, Stack, Text, VStack } from '@chakra-ui/react'
+import { useTranslation } from 'react-i18next'
 
 export const HomeContent = () => {
+  const { t } = useTranslation()
   return (
     <Stack
+      spacing={0}
       direction={{
         base: 'column',
         lg: 'row',
       }}
-      spacing={{
-        base: 5,
-      }}
       px={{
         base: 2,
         sm: 10,
-        lg: 20,
+        lg: 16,
       }}
     >
       <Stack spacing={[4, 6]}>
@@ -25,33 +25,32 @@ export const HomeContent = () => {
             lg: 'start',
           }}
         >
-          Draw and write loving, cute and fun notes
+          {t('home.page.content.title')}
         </Text>
         <VStack
           spacing={4}
           alignItems="flex-start"
           maxW={{
             base: '100&',
-            lg: '90%',
+            xl: '90%',
           }}
         >
           <Text textStyle="Title/Regular">
-            With more than one million downloads, Noteit is a new kind of
-            relationship goals between partners and friends. This is because it
-            allows the simultaneous and synchronous exchange of notes. Once
-            installed, you immediately connect with your partner or friend
-            through a code and that&apos;s it!
+            {t('home.page.content.paragraph.1')}
           </Text>
           <Text textStyle="Title/Regular">
-            You can also pin a widget to your home screen and see the note
-            whenever you unlock your device.
+            {t('home.page.content.paragraph.2')}
           </Text>
           <Text textStyle="Title/Regular">
-            Enjoy! Express yourself using Noteit.
+            {t('home.page.content.paragraph.3')}
           </Text>
         </VStack>
       </Stack>
-      <Image src="/Screenshots.png" alt="Screenshots from Noteit" p={5} />
+      <Image
+        src="/Screenshots.png"
+        alt={t('home.page.content.image.screenshots')}
+        p={5}
+      />
     </Stack>
   )
 }

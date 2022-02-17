@@ -1,4 +1,5 @@
 import { HStack, IconProps, Link, Text, VStack } from '@chakra-ui/react'
+import { useTranslation } from 'react-i18next'
 
 import { PencilIcon, PencilScribbleIcon } from '@components'
 import { routes } from '@constants'
@@ -36,7 +37,9 @@ const PencilScribble = (props: IconProps) => {
   )
 }
 
-export const Footer = () => {
+export const HomeFooter = () => {
+  const { t } = useTranslation()
+
   return (
     <VStack bgColor="gray.500" spacing={0}>
       <HStack
@@ -63,9 +66,11 @@ export const Footer = () => {
           }}
           justify="center"
         >
-          <Text textStyle="Other/Gamja">Draw</Text>
-          <Text textStyle="Other/Gamja">Share</Text>
-          <Text textStyle="Other/Gamja">Have fun</Text>
+          <Text textStyle="Other/Gamja">{t('home.page.footer.top.draw')}</Text>
+          <Text textStyle="Other/Gamja">{t('home.page.footer.top.share')}</Text>
+          <Text textStyle="Other/Gamja">
+            {t('home.page.footer.top.have-fun')}
+          </Text>
         </HStack>
         <HStack>
           <PencilScribble transform={'scaleX(-1)'} />
@@ -84,10 +89,10 @@ export const Footer = () => {
         bgColor="white"
       >
         <Link href={routes.privacyPolicy.path} textStyle="Title/Semibold">
-          Privacy Policy
+          {t('home.page.footer.bottom.privacy-policy')}
         </Link>
         <Link href={routes.contactUs.path} textStyle="Title/Semibold">
-          Contact Us
+          {t('home.page.footer.bottom.contact-us')}
         </Link>
       </HStack>
     </VStack>

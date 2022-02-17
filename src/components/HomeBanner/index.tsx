@@ -68,14 +68,6 @@ export const HomeBanner = () => {
           alt={t('home.banner.image.iphone')}
           position="absolute"
           zIndex={1}
-          // right={{
-          //   base: -5,
-          //   md: 0,
-          // }}
-          // top={{
-          //   base: -3,
-          //   md: 0,
-          // }}
           left={{
             base: '45%',
             md: '30%',

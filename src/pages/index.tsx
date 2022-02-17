@@ -1,6 +1,11 @@
 import { Container, Stack } from '@chakra-ui/react'
 
-import { HomeBanner, HomeContent, HomeFooter } from '@components'
+import {
+  HomeBanner,
+  HomeContent,
+  HomeFooter,
+  SocialNetworks,
+} from '@components'
 
 const Home = () => {
   return (
@@ -20,7 +25,27 @@ const Home = () => {
             lg: 28,
           }}
         >
-          <HomeBanner />
+          <Stack position="relative" spacing={0}>
+            <HomeBanner />
+            <SocialNetworks
+              position="absolute"
+              direction={{
+                base: 'row',
+                xl: 'column',
+              }}
+              right={{
+                xl: 0,
+              }}
+              bottom={{
+                base: 0,
+                xl: 'inherit',
+              }}
+              transform={{
+                base: 'translateY(130%)',
+                xl: 'translateX(130%)',
+              }}
+            />
+          </Stack>
           <HomeContent />
         </Stack>
       </Container>

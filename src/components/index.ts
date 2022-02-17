@@ -1,2 +1,2 @@
 export * from './Icons'
-export * from './IPhonesImgs'
+export * from './Footer'

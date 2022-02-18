@@ -1,3 +1,7 @@
+import '@fontsource/poppins/400.css'
+import '@fontsource/poppins/600.css'
+import '@fontsource/gamja-flower/400.css'
+
 import { ChakraProvider, ScaleFade } from '@chakra-ui/react'
 import type { AppProps } from 'next/app'
 import { I18nextProvider } from 'react-i18next'
@@ -11,11 +15,11 @@ function MyApp({ Component, pageProps, router }: AppProps) {
   return (
     <I18nextProvider i18n={i18n}>
       <ChakraProvider theme={theme}>
-        <AppWrapper>
-          <ScaleFade key={router.route} initialScale={0.9} in={true}>
+        <ScaleFade key={router.route} initialScale={0.9} in={true}>
+          <AppWrapper>
             <Component {...pageProps} />
-          </ScaleFade>
-        </AppWrapper>
+          </AppWrapper>
+        </ScaleFade>
       </ChakraProvider>
     </I18nextProvider>
   )

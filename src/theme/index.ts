@@ -1,6 +1,14 @@
 import { extendTheme } from '@chakra-ui/react'
 
 const theme = extendTheme({
+  styles: {
+    global: {
+      'html, body': {
+        // background: '#E5E5E5',
+      },
+    },
+  },
+
   colors: {
     primary: '#1AC6B1',
     secondary: '#1DE6D3',
@@ -25,8 +33,8 @@ const theme = extendTheme({
   },
 
   fonts: {
-    body: 'Poppins, sans-serif',
-    // heading: 'Poppins, sans-serif',
+    body: 'Poppins',
+    heading: 'Poppins',
   },
 
   textStyles: {
@@ -75,7 +83,7 @@ const theme = extendTheme({
       // lineHeight: '25px',
     },
     'Other/Gamja': {
-      fontFamily: 'Gamja Flower, cursive',
+      fontFamily: 'Gamja Flower',
       fontSize: {
         base: '24px',
         lg: '48px',

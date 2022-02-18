@@ -86,7 +86,9 @@ export const HomeBanner = () => {
             md: '362px',
           }}
         />
-        <DrawLogoIcon
+        <Image
+          src="/Draw.png"
+          alt={t('home.banner.image.draw')}
           position="absolute"
           right={0}
           display={{

@@ -3,7 +3,7 @@
     "banner": {
       "share-notes": "Share notes",
       "share-memories": "Share memories",
-      "image": { "iphone": "IPhone running Noteit" }
+      "image": { "iphone": "IPhone running Noteit", "draw": "Draw" }
     },
     "content": {
       "title": "Draw and write loving, cute and fun notes",

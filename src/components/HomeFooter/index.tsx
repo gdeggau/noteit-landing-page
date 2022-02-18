@@ -86,7 +86,7 @@ export const HomeFooter = () => {
           <Pencil transform={'rotate(180deg)'} />
         </HStack>
       </HStack>
-      <HStack
+      {/* <HStack
         width="100%"
         borderTopLeftRadius="50px"
         spacing={8}
@@ -103,7 +103,7 @@ export const HomeFooter = () => {
         <Link href={routes.contactUs.path} textStyle="Title/Semibold">
           {t('home.footer.bottom.contact-us')}
         </Link>
-      </HStack>
+      </HStack> */}
     </VStack>
   )
 }

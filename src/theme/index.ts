@@ -47,11 +47,11 @@ const theme = extendTheme({
       // lineHeight: '100%',
     },
     'LargeTitle/Semibold': {
-      fontSize: {
+      'font-size': {
         base: '14px',
         md: '27px',
       },
-      fontWeight: '600',
+      'font-weight': '600',
       // lineHeight: '100%',
     },
     'Title1/Regular': {
@@ -83,12 +83,12 @@ const theme = extendTheme({
       // lineHeight: '25px',
     },
     'Other/Gamja': {
-      fontFamily: 'Gamja Flower',
-      fontSize: {
+      'font-family': 'Gamja Flower',
+      'font-size': {
         base: '24px',
         lg: '48px',
       },
-      fontWeight: '400',
+      'font-weight': '400',
       color: 'green.50',
     },
   },

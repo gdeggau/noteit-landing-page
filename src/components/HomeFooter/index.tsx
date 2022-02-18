@@ -1,4 +1,11 @@
-import { HStack, IconProps, Link, Text, VStack } from '@chakra-ui/react'
+import {
+  HStack,
+  Heading,
+  IconProps,
+  Link,
+  Text,
+  VStack,
+} from '@chakra-ui/react'
 import { useTranslation } from 'react-i18next'
 
 import { PencilIcon, PencilScribbleIcon } from '@components'
@@ -66,9 +73,13 @@ export const HomeFooter = () => {
           }}
           justify="center"
         >
-          <Text textStyle="Other/Gamja">{t('home.footer.top.draw')}</Text>
-          <Text textStyle="Other/Gamja">{t('home.footer.top.share')}</Text>
-          <Text textStyle="Other/Gamja">{t('home.footer.top.have-fun')}</Text>
+          <Heading textStyle="Other/Gamja">{t('home.footer.top.draw')}</Heading>
+          <Heading textStyle="Other/Gamja">
+            {t('home.footer.top.share')}
+          </Heading>
+          <Heading textStyle="Other/Gamja">
+            {t('home.footer.top.have-fun')}
+          </Heading>
         </HStack>
         <HStack>
           <PencilScribble transform={'scaleX(-1)'} />

@@ -1,4 +1,5 @@
 import { Container, Stack } from '@chakra-ui/react'
+import Head from 'next/head'
 
 import {
   HomeBanner,
@@ -10,6 +11,9 @@ import {
 const Home = () => {
   return (
     <>
+      <Head>
+        <title>Note!t</title>
+      </Head>
       <Container
         maxW="container.xl"
         py={{

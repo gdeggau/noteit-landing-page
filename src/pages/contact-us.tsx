@@ -5,66 +5,62 @@ import {
   Input,
   Stack,
   Textarea,
-  VStack,
 } from '@chakra-ui/react'
 import { useTranslation } from 'react-i18next'
 
-import { Banner, SocialNetworks } from '@components'
-import { CommonContainer } from '@layouts'
+import { SocialNetworks } from '@components'
+import { DefaultPage } from '@layouts'
 
 const ContactUs = () => {
   const { t } = useTranslation()
   return (
-    <>
-      <Banner
-        title={t('contact-us.header.title')}
-        subtitle={t('contact-us.header.subtitle')}
-      />
-      <VStack>
-        <CommonContainer>
+    <DefaultPage
+      title={t('contact-us.header.title')}
+      subtitle={t('contact-us.header.subtitle')}
+      mainContent={
+        <Stack
+          as="form"
+          spacing={{ base: 5, lg: 7 }}
+          align="center"
+          textStyle="Body/Regular"
+        >
           <Stack
-            as="form"
-            spacing={{ base: 5, lg: 7 }}
-            align="center"
-            textStyle="Body/Regular"
+            direction={{
+              base: 'column',
+              md: 'row',
+            }}
+            spacing={{
+              base: 5,
+            }}
+            width="100%"
           >
-            <Stack
-              direction={{
-                base: 'column',
-                md: 'row',
-              }}
-              spacing={{
-                base: 5,
-              }}
-              width="100%"
-            >
-              <FormControl>
-                <FormLabel htmlFor="name">
-                  {t('contact-us.form.label.name')}
-                </FormLabel>
-                <Input id="name" />
-              </FormControl>
-              <FormControl>
-                <FormLabel htmlFor="email">
-                  {t('contact-us.form.label.email')}
-                </FormLabel>
-                <Input id="email" type="email" />
-              </FormControl>
-            </Stack>
             <FormControl>
-              <FormLabel htmlFor="message">
-                {t('contact-us.form.label.message')}
+              <FormLabel htmlFor="name">
+                {t('contact-us.form.label.name')}
               </FormLabel>
-              <Textarea id="message" />
+              <Input id="name" />
             </FormControl>
-            <Button maxW={80} isFullWidth type="submit">
-              {t('contact-us.form.button.send')}
-            </Button>
+            <FormControl>
+              <FormLabel htmlFor="email">
+                {t('contact-us.form.label.email')}
+              </FormLabel>
+              <Input id="email" type="email" />
+            </FormControl>
           </Stack>
-        </CommonContainer>
-        <SocialNetworks direction="row" />
-      </VStack>
-    </>
+          <FormControl>
+            <FormLabel htmlFor="message">
+              {t('contact-us.form.label.message')}
+            </FormLabel>
+            <Textarea id="message" />
+          </FormControl>
+          <Button maxW={80} isFullWidth type="submit">
+            {t('contact-us.form.button.send')}
+          </Button>
+        </Stack>
+      }
+    >
+      <SocialNetworks direction="row" />
+    </DefaultPage>
   )
 }
 

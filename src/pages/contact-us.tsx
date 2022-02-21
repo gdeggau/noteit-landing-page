@@ -1,6 +1,5 @@
 import {
   Button,
-  Flex,
   FormControl,
   FormLabel,
   Input,
@@ -10,14 +9,14 @@ import {
 } from '@chakra-ui/react'
 import { useTranslation } from 'react-i18next'
 
-import { Header, SocialNetworks } from '@components'
+import { Banner, SocialNetworks } from '@components'
 import { CommonContainer } from '@layouts'
 
 const ContactUs = () => {
   const { t } = useTranslation()
   return (
     <>
-      <Header
+      <Banner
         title={t('contact-us.header.title')}
         subtitle={t('contact-us.header.subtitle')}
       />

@@ -1,11 +1,11 @@
 import { Text, VStack } from '@chakra-ui/react'
 
-type HeaderProps = {
+type BannerProps = {
   title: string
   subtitle: string
 }
 
-export const Header = ({ title, subtitle }: HeaderProps) => {
+export const Banner = ({ title, subtitle }: BannerProps) => {
   return (
     <VStack
       bgColor="primary"

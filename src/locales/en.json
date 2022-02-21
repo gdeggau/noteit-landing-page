@@ -60,5 +60,21 @@
         "23": "Email address"
       }
     }
+  },
+  "contact-us": {
+    "header": {
+      "title": "Contact Us",
+      "subtitle": "How can we help?"
+    },
+    "form": {
+      "label": {
+        "name": "Name",
+        "email": "Email",
+        "message": "Message"
+      },
+      "button": {
+        "send": "Send"
+      }
+    }
   }
 }

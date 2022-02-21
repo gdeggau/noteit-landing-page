@@ -2,10 +2,11 @@ import {
   HStack,
   Heading,
   IconProps,
-  Link,
+  // Link,
   Text,
   VStack,
 } from '@chakra-ui/react'
+import Link from 'next/link'
 import { useTranslation } from 'react-i18next'
 
 import { PencilIcon, PencilScribbleIcon } from '@components'
@@ -73,20 +74,16 @@ export const HomeFooter = () => {
           }}
           justify="center"
         >
-          <Heading textStyle="Other/Gamja">{t('home.footer.top.draw')}</Heading>
-          <Heading textStyle="Other/Gamja">
-            {t('home.footer.top.share')}
-          </Heading>
-          <Heading textStyle="Other/Gamja">
-            {t('home.footer.top.have-fun')}
-          </Heading>
+          <Text textStyle="Other/Gamja">{t('home.footer.top.draw')}</Text>
+          <Text textStyle="Other/Gamja">{t('home.footer.top.share')}</Text>
+          <Text textStyle="Other/Gamja">{t('home.footer.top.have-fun')}</Text>
         </HStack>
         <HStack>
           <PencilScribble transform={'scaleX(-1)'} />
           <Pencil transform={'rotate(180deg)'} />
         </HStack>
       </HStack>
-      {/* <HStack
+      <HStack
         width="100%"
         borderTopLeftRadius="50px"
         spacing={8}
@@ -97,13 +94,21 @@ export const HomeFooter = () => {
         }}
         bgColor="white"
       >
-        <Link href={routes.privacyPolicy.path} textStyle="Title/Semibold">
-          {t('home.footer.bottom.privacy-policy')}
+        <Link href={routes.privacyPolicy.path} passHref>
+          <a>
+            <Text textStyle="Title/Semibold">
+              {t('home.footer.bottom.privacy-policy')}
+            </Text>
+          </a>
         </Link>
-        <Link href={routes.contactUs.path} textStyle="Title/Semibold">
-          {t('home.footer.bottom.contact-us')}
+        <Link href={routes.contactUs.path} passHref>
+          <a>
+            <Text textStyle="Title/Semibold">
+              {t('home.footer.bottom.contact-us')}
+            </Text>
+          </a>
         </Link>
-      </HStack> */}
+      </HStack>
     </VStack>
   )
 }

@@ -1,10 +1,12 @@
 import { extendTheme } from '@chakra-ui/react'
 
+import { Button, Input, Textarea } from './components'
+
 const theme = extendTheme({
   styles: {
     global: {
       'html, body': {
-        // background: '#E5E5E5',
+        background: 'gray.50',
       },
     },
   },
@@ -32,6 +34,12 @@ const theme = extendTheme({
     },
   },
 
+  components: {
+    Input,
+    Textarea,
+    Button,
+  },
+
   fonts: {
     body: 'Poppins',
     heading: 'Poppins',
@@ -44,52 +52,58 @@ const theme = extendTheme({
         md: '27px',
       },
       fontWeight: '400',
-      // lineHeight: '100%',
+      lineHeight: 'normal',
     },
     'LargeTitle/Semibold': {
-      'font-size': {
+      fontSize: {
         base: '14px',
         md: '27px',
       },
-      'font-weight': '600',
-      // lineHeight: '100%',
+      fontWeight: '600',
+      lineHeight: 'normal',
     },
     'Title1/Regular': {
       fontSize: '21px',
       fontWeight: '400',
-      // lineHeight: '31px',
+      lineHeight: 'normal',
     },
     'Title1/Semibold': {
       fontSize: '21px',
       fontWeight: '600',
-      // lineHeight: '31px',
+      lineHeight: 'normal',
     },
     'Title/Regular': {
       fontSize: {
         base: '13px',
         md: '17px',
       },
-
       fontWeight: '400',
-      // lineHeight: '25px',
+      lineHeight: 'normal',
     },
     'Title/Semibold': {
       fontSize: {
         base: '13px',
         md: '17px',
       },
-
       fontWeight: '600',
-      // lineHeight: '25px',
+      lineHeight: 'normal',
+    },
+    'Body/Regular': {
+      fontSize: {
+        base: '15px',
+      },
+      fontWeight: '400',
+      lineHeight: 'normal',
     },
     'Other/Gamja': {
       'font-family': 'Gamja Flower',
-      'font-size': {
+      fontSize: {
         base: '24px',
         lg: '48px',
       },
-      'font-weight': '400',
+      fontWeight: '400',
       color: 'green.50',
+      lineHeight: 'normal',
     },
   },
 })

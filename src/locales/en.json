@@ -1,5 +1,9 @@
 {
+  "common": {
+    "logo": "Noteit logo"
+  },
   "home": {
+    "label": "Home",
     "banner": {
       "share-notes": "Share notes",
       "share-memories": "Share memories",
@@ -29,6 +33,7 @@
     }
   },
   "privacy-policy": {
+    "label": "Privacy Policy",
     "header": {
       "title": "Privacy Policy",
       "subtitle": "Last updated: June 04, 2021"
@@ -118,6 +123,7 @@
     }
   },
   "contact-us": {
+    "label": "Contact Us",
     "header": {
       "title": "Contact Us",
       "subtitle": "How can we help?"

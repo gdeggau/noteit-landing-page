@@ -4,6 +4,9 @@
   },
   "home": {
     "label": "Home",
+    "seo": {
+      "title": "Note!t, share notes, share memories"
+    },
     "banner": {
       "share-notes": "Share notes",
       "share-memories": "Share memories",

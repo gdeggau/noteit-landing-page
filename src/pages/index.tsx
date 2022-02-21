@@ -1,19 +1,19 @@
 import { Container, Stack } from '@chakra-ui/react'
-import Head from 'next/head'
+import { useTranslation } from 'react-i18next'
 
 import {
   HomeBanner,
   HomeContent,
   HomeFooter,
+  SEO,
   SocialNetworks,
 } from '@components'
 
 const Home = () => {
+  const { t } = useTranslation()
   return (
     <>
-      <Head>
-        <title>Note!t</title>
-      </Head>
+      <SEO title={t('home.seo.title')} shouldExcludeTitleSuffix />
       <Container
         maxW="container.xl"
         py={{

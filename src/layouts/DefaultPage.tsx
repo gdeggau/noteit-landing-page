@@ -1,9 +1,23 @@
 import { Flex } from '@chakra-ui/react'
 import { Text, VStack } from '@chakra-ui/react'
+import styled from '@emotion/styled'
 
-import { Header } from '@components'
+import { Header, SEO } from '@components'
 
 import { CommonContainer } from './CommonContainer'
+
+const BannerContainer = styled(VStack)`
+  /* background-image: url(/DrawSmall.png);
+  background-repeat: space; */
+  /* background-position: left center;
+  background-repeat: repeat-x; */
+  /* background-repeat: repeat-x, repeat-x;
+  background-position-y: -60px, 400px;
+  background-position-x: -150px, -270px; */
+  /* background-position: top left, center center;
+  background-repeat: repeat, no-repeat;
+  background-size: auto, cover; */
+`
 
 type BannerProps = {
   title: string
@@ -12,14 +26,11 @@ type BannerProps = {
 
 const Banner = ({ title, subtitle }: BannerProps) => {
   return (
-    <VStack
+    <BannerContainer
       bgColor="primary"
       spacing={{ base: 1, lg: 2 }}
       pt={{ base: 6, lg: 8 }}
       pb={{ base: 10, lg: 24 }}
-      // bgImage="url(/DrawSmall.png), url(/DrawSmall.png)"
-      // bgRepeat="repeat-x, repeat-x"
-      // bgPosition="-150px, -270px"
     >
       <Text textStyle="LargeTitle/Semibold" color="white">
         {title}
@@ -27,7 +38,7 @@ const Banner = ({ title, subtitle }: BannerProps) => {
       <Text textStyle="Title1/Regular" color="white">
         {subtitle}
       </Text>
-    </VStack>
+    </BannerContainer>
   )
 }
 
@@ -46,6 +57,7 @@ export const DefaultPage = ({
 }: DefaultPageProps) => {
   return (
     <>
+      <SEO title={title} />
       <Header />
       <Banner title={title} subtitle={subtitle} />
       <Flex direction="column" align="center">

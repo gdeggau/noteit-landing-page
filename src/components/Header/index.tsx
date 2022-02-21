@@ -38,7 +38,11 @@ const NavItem = ({ href, label }: NavItemProps) => {
       </Link>
       {isCurrentRoute && (
         <Box
-          top={7}
+          top={{
+            base: 4,
+            md: 5,
+            lg: 7,
+          }}
           position="absolute"
           bgColor="primary"
           width="50%"

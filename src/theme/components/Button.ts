@@ -1,16 +1,26 @@
-import { lighten } from '@chakra-ui/theme-tools'
+import { ComponentStyleConfig } from '@chakra-ui/react'
+import { darken } from '@chakra-ui/theme-tools'
 
-export const Button = {
+export const Button: ComponentStyleConfig = {
   baseStyle: {
     borderRadius: 'lg',
-    bg: 'primary',
-    color: 'white',
-    _hover: {
-      bg: lighten('primary', 4),
+    fontWeight: '400',
+  },
+  variants: {
+    default: {
+      height: '2.75rem',
+      apply: 'textStyles.Title/Regular',
+      bg: 'primary',
+      color: 'white',
+      _hover: {
+        bg: darken('primary', 4),
+        _disabled: {
+          bg: 'primary',
+        },
+      },
     },
   },
   defaultProps: {
-    variant: null,
-    textStyle: 'Title/Regular',
+    variant: 'default',
   },
 }

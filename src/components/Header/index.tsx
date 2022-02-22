@@ -1,16 +1,9 @@
-import {
-  Box,
-  Container,
-  Flex,
-  HStack,
-  Image,
-  Text,
-  VStack,
-} from '@chakra-ui/react'
+import { Box, Container, Flex, HStack, Text, VStack } from '@chakra-ui/react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { useTranslation } from 'react-i18next'
 
+import { Application3Icon } from '@components'
 import { routes } from '@constants'
 
 type NavItemProps = {
@@ -64,15 +57,7 @@ export const Header = () => {
         justifyContent="space-between"
         display="flex"
       >
-        <Image
-          src="/Application3.png"
-          alt={t('common.logo')}
-          width={{
-            base: '25px',
-            lg: '50px',
-          }}
-        />
-
+        <Application3Icon boxSize={'50px'} />
         <HStack as="nav" spacing={10}>
           <NavItem href={routes.home.path} label={t('home.label')} />
           <NavItem

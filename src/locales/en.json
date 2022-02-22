@@ -138,7 +138,16 @@
         "message": "Message"
       },
       "button": {
-        "send": "Send"
+        "send": "Send",
+        "sending": "Sending"
+      },
+      "success": {
+        "title": "Email sent.",
+        "description": "We received your email successfully, thank you."
+      },
+      "error": {
+        "title": "A problem has happened.",
+        "description": "Please try again in few minutes."
       }
     }
   }

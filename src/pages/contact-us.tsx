@@ -7,15 +7,39 @@ import {
   Input,
   Stack,
   Textarea,
+  UseToastOptions,
+  useToast,
 } from '@chakra-ui/react'
 import { useTranslation } from 'react-i18next'
 
 import { SocialNetworks } from '@components'
 import { DefaultPage } from '@layouts'
+import { sendEmail } from '@services'
+
+const INITIAL_FORM_DATA = {
+  email: '',
+  name: '',
+  message: '',
+}
 
 const ContactUs = () => {
-  const [formData, setFormData] = useState({})
+  const [formData, setFormData] = useState(INITIAL_FORM_DATA)
+  const [isLoading, setIsLoading] = useState(false)
+
+  const toast = useToast()
   const { t } = useTranslation()
+
+  const emailSuccessSent: UseToastOptions = {
+    status: 'success',
+    title: t('contact-us.form.success.title'),
+    description: t('contact-us.form.success.description'),
+  }
+
+  const failedToSendEmail: UseToastOptions = {
+    status: 'error',
+    title: t('contact-us.form.error.title'),
+    description: t('contact-us.form.error.description'),
+  }
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -26,9 +50,22 @@ const ContactUs = () => {
     }))
   }
 
-  const handleSubmit = (e: React.FormEvent<HTMLDivElement>) => {
-    e.preventDefault()
-    console.log(formData)
+  const handleSubmit = async (e: React.FormEvent<HTMLDivElement>) => {
+    try {
+      setIsLoading(true)
+      e.preventDefault()
+      await sendEmail({
+        userName: formData.name,
+        message: formData.message,
+        sentByEmail: formData.email,
+      })
+      toast(emailSuccessSent)
+      setFormData({ ...INITIAL_FORM_DATA })
+    } catch (error) {
+      toast(failedToSendEmail)
+    } finally {
+      setIsLoading(false)
+    }
   }
 
   return (
@@ -58,7 +95,13 @@ const ContactUs = () => {
                 <FormLabel htmlFor="name">
                   {t('contact-us.form.label.name')}
                 </FormLabel>
-                <Input id="name" name="name" onChange={handleChange} />
+                <Input
+                  id="name"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  isRequired
+                />
               </FormControl>
               <FormControl>
                 <FormLabel htmlFor="email">
@@ -68,7 +111,9 @@ const ContactUs = () => {
                   id="email"
                   type="email"
                   name="email"
+                  value={formData.email}
                   onChange={handleChange}
+                  isRequired
                 />
               </FormControl>
             </Stack>
@@ -76,9 +121,21 @@ const ContactUs = () => {
               <FormLabel htmlFor="message">
                 {t('contact-us.form.label.message')}
               </FormLabel>
-              <Textarea id="message" name="message" onChange={handleChange} />
+              <Textarea
+                id="message"
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
+                isRequired
+              />
             </FormControl>
-            <Button maxW={80} isFullWidth type="submit">
+            <Button
+              maxW={80}
+              isFullWidth
+              type="submit"
+              isLoading={isLoading}
+              loadingText={t('contact-us.form.button.sending')}
+            >
               {t('contact-us.form.button.send')}
             </Button>
           </Stack>

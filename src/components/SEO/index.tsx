@@ -6,7 +6,7 @@ type SEOProps = {
 }
 
 export const SEO = ({ title, shouldExcludeTitleSuffix }: SEOProps) => {
-  const pageTitle = `${title} ${!shouldExcludeTitleSuffix ? '| Note!t' : ''}`
+  const pageTitle = `${title} ${!shouldExcludeTitleSuffix ? '| Noteit' : ''}`
   return (
     <Head>
       <title>{pageTitle}</title>

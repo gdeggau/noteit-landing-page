@@ -60,10 +60,14 @@ export const Header = () => {
         }}
         display="flex"
       >
-        <Application3Icon
-          boxSize={'50px'}
-          display={{ base: 'none', md: 'flex' }}
-        />
+        <Link href={routes.home.path} passHref>
+          <a>
+            <Application3Icon
+              boxSize={'50px'}
+              display={{ base: 'none', md: 'flex' }}
+            />
+          </a>
+        </Link>
         <HStack as="nav" spacing={10}>
           <NavItem href={routes.home.path} label={t('home.label')} />
           <NavItem

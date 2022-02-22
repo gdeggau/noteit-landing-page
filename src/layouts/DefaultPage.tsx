@@ -8,7 +8,12 @@ import { CommonContainer } from './CommonContainer'
 
 const BannerContainer = styled(VStack)`
   /* background-image: url(/DrawSmall.png);
-  background-repeat: space; */
+  background-size: 30px 30px;
+  background-size: 50vmin 50vmin;
+  background-position: 0 0, 15% 5%, 22% 45%, 45% 56%, 60% 60%, 75% 3%, 87% 88%,
+    91% 3%;
+  background-repeat: no-repeat no-repeat; */
+  /* background-repeat: space; */
   /* background-position: left center;
   background-repeat: repeat-x; */
   /* background-repeat: repeat-x, repeat-x;

@@ -54,10 +54,16 @@ export const Header = () => {
       <Container
         maxW="container.xl"
         py={4}
-        justifyContent="space-between"
+        justifyContent={{
+          base: 'center',
+          md: 'space-between',
+        }}
         display="flex"
       >
-        <Application3Icon boxSize={'50px'} />
+        <Application3Icon
+          boxSize={'50px'}
+          display={{ base: 'none', md: 'flex' }}
+        />
         <HStack as="nav" spacing={10}>
           <NavItem href={routes.home.path} label={t('home.label')} />
           <NavItem

@@ -10,7 +10,7 @@ import {
 import Link from 'next/link'
 import { useTranslation } from 'react-i18next'
 
-import { PencilIcon, PencilScribbleIcon } from '@components'
+import { Application3Icon, PencilIcon, PencilScribbleIcon } from '@components'
 import { routes } from '@constants'
 
 const Pencil = (props: IconProps) => {
@@ -85,23 +85,6 @@ const TopFooter = () => {
   )
 }
 
-const LogoContainer = (props: BoxProps) => {
-  const { t } = useTranslation()
-  return (
-    <Box
-      bgColor="white"
-      borderRadius="50px"
-      boxSize={{
-        base: '40px',
-        lg: '82px',
-      }}
-      {...props}
-    >
-      <Image src="Application3.png" alt={t('common.logo')} />
-    </Box>
-  )
-}
-
 const BottomFooter = () => {
   const { t } = useTranslation()
   return (
@@ -117,8 +100,12 @@ const BottomFooter = () => {
       bgColor="white"
       position="relative"
     >
-      <LogoContainer
+      <Application3Icon
         position="absolute"
+        boxSize={{
+          base: '40px',
+          lg: '82px',
+        }}
         transform={{
           base: 'translateY(-100%)',
           lg: 'translateY(-80%)',

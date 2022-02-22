@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next'
 
 import {
   HomeBanner,
+  HomeBlueStainIcon,
   HomeContent,
   HomeFooter,
   SEO,
@@ -14,9 +15,22 @@ const Home = () => {
   return (
     <>
       <SEO title={t('home.seo.title')} shouldExcludeTitleSuffix />
-      <Box bgGradient="linear(180deg, white 0%, gray.50 100%)">
+      <Box
+        bgGradient="linear(180deg, white 0%, gray.50 100%)"
+        position="relative"
+      >
+        <HomeBlueStainIcon
+          position="absolute"
+          width="134px"
+          height="400px"
+          bottom="20%"
+          display={{
+            base: 'none',
+            xl: 'flex',
+          }}
+        />
         <Container
-          maxW="container.xl"
+          maxW="1230px"
           py={{
             base: 5,
             md: 20,

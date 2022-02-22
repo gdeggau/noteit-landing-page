@@ -42,9 +42,12 @@ export const HomeContent = () => {
         </VStack>
       </Stack>
       <Image
+        width="100%"
+        maxW="500px"
         src="/Screenshots.png"
         alt={t('home.content.image.screenshots')}
         p={5}
+        alignSelf="center"
       />
     </Stack>
   )

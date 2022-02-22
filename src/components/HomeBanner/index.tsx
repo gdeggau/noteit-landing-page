@@ -40,14 +40,15 @@ export const HomeBanner = () => {
               {t('home.banner.share-memories')}
             </Text>
           </VStack>
-          <HStack spacing={2}>
+          <HStack spacing={{ base: 1, sm: 2 }}>
             <Link href={store.appStore} isExternal>
               <Image
                 src="/AppStore.png"
                 alt="App Store"
-                width={{
-                  base: 12,
-                  md: 24,
+                height={{
+                  base: '17.04px',
+                  md: '32.04px',
+                  lg: 'max-content',
                 }}
               />
             </Link>
@@ -55,9 +56,10 @@ export const HomeBanner = () => {
               <Image
                 src="/GooglePlay.png"
                 alt="Google Play"
-                width={{
-                  base: 14,
-                  md: 28,
+                height={{
+                  base: '17.82px',
+                  md: '32.82px',
+                  lg: 'max-content',
                 }}
               />
             </Link>

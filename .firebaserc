@@ -1,0 +1,8 @@
+{
+  "projects": {
+    "default": "noteit---development",
+    "development": "noteit---development",
+    "production": "noteit-4dca3"
+  },
+  "targets": {}
+}

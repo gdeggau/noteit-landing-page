@@ -1,58 +1,74 @@
-import { Container, Stack } from '@chakra-ui/react'
-import Head from 'next/head'
+import { Box, Container, Stack } from '@chakra-ui/react'
+import { useTranslation } from 'react-i18next'
 
 import {
   HomeBanner,
+  HomeBlueStainIcon,
   HomeContent,
   HomeFooter,
+  SEO,
   SocialNetworks,
 } from '@components'
 
 const Home = () => {
+  const { t } = useTranslation()
   return (
     <>
-      <Head>
-        <title>Note!t</title>
-      </Head>
-      <Container
-        maxW="container.xl"
-        py={{
-          base: 5,
-          md: 20,
-        }}
+      <SEO title={t('home.seo.title')} shouldExcludeTitleSuffix />
+      <Box
+        bgGradient="linear(180deg, white 0%, gray.50 100%)"
+        position="relative"
       >
-        <Stack
-          spacing={{
-            base: 16,
-            sm: 20,
-            md: 24,
-            lg: 28,
+        <HomeBlueStainIcon
+          position="absolute"
+          width="134px"
+          height="400px"
+          bottom="20%"
+          display={{
+            base: 'none',
+            xl: 'flex',
+          }}
+        />
+        <Container
+          maxW="1230px"
+          py={{
+            base: 5,
+            md: 20,
           }}
         >
-          <Stack position="relative" spacing={0}>
-            <HomeBanner />
-            <SocialNetworks
-              position="absolute"
-              direction={{
-                base: 'row',
-                xl: 'column',
-              }}
-              right={{
-                xl: 0,
-              }}
-              bottom={{
-                base: 0,
-                xl: 'inherit',
-              }}
-              transform={{
-                base: 'translateY(130%)',
-                xl: 'translateX(130%)',
-              }}
-            />
+          <Stack
+            spacing={{
+              base: 16,
+              sm: 20,
+              md: 24,
+              lg: 28,
+            }}
+          >
+            <Stack position="relative" spacing={0}>
+              <HomeBanner />
+              <SocialNetworks
+                position="absolute"
+                direction={{
+                  base: 'row',
+                  xl: 'column',
+                }}
+                right={{
+                  xl: 0,
+                }}
+                bottom={{
+                  base: 0,
+                  xl: 'inherit',
+                }}
+                transform={{
+                  base: 'translateY(130%)',
+                  xl: 'translateX(130%)',
+                }}
+              />
+            </Stack>
+            <HomeContent />
           </Stack>
-          <HomeContent />
-        </Stack>
-      </Container>
+        </Container>
+      </Box>
       <HomeFooter />
     </>
   )

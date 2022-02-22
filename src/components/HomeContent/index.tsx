@@ -1,4 +1,4 @@
-import { Heading, Image, Stack, Text, VStack } from '@chakra-ui/react'
+import { Image, Stack, Text, VStack } from '@chakra-ui/react'
 import { useTranslation } from 'react-i18next'
 
 export const HomeContent = () => {
@@ -17,8 +17,9 @@ export const HomeContent = () => {
       }}
     >
       <Stack spacing={[4, 6]}>
-        <Heading
+        <Text
           textStyle="LargeTitle/Semibold"
+          as="h1"
           color="primary"
           textAlign={{
             base: 'center',
@@ -26,7 +27,7 @@ export const HomeContent = () => {
           }}
         >
           {t('home.content.title')}
-        </Heading>
+        </Text>
         <VStack
           spacing={4}
           alignItems="flex-start"
@@ -41,9 +42,12 @@ export const HomeContent = () => {
         </VStack>
       </Stack>
       <Image
+        width="100%"
+        maxW="500px"
         src="/Screenshots.png"
         alt={t('home.content.image.screenshots')}
         p={5}
+        alignSelf="center"
       />
     </Stack>
   )

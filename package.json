@@ -3,7 +3,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && next export",
+    "build:dev": "env-cmd -f .env.development npm run build",
     "start": "next start",
     "lint": "next lint",
     "gen:theme-typings": "chakra-cli tokens ./src/theme/index.ts",
@@ -16,6 +17,7 @@
     "@emotion/styled": "11",
     "@fontsource/gamja-flower": "^4.5.2",
     "@fontsource/poppins": "^4.5.1",
+    "env-cmd": "^10.1.0",
     "framer-motion": "5",
     "i18next": "^21.6.11",
     "next": "12.0.10",

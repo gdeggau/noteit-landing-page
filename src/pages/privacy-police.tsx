@@ -1,21 +1,16 @@
-import { Box, Container } from '@chakra-ui/react'
 import { useTranslation } from 'react-i18next'
 
-import { Header, PrivacyPolicyText } from '@components'
-import { CommonContainer } from '@layouts'
+import { PrivacyPolicyText } from '@components'
+import { DefaultPage } from '@layouts'
 
 const PrivacyPolice = () => {
   const { t } = useTranslation()
   return (
-    <>
-      <Header
-        title={t('privacy-policy.header.title')}
-        subtitle={t('privacy-policy.header.subtitle')}
-      />
-      <CommonContainer>
-        <PrivacyPolicyText />
-      </CommonContainer>
-    </>
+    <DefaultPage
+      title={t('privacy-policy.header.title')}
+      subtitle={t('privacy-policy.header.subtitle')}
+      mainContent={<PrivacyPolicyText />}
+    />
   )
 }
 

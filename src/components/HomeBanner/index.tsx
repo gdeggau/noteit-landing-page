@@ -1,15 +1,7 @@
-import {
-  Box,
-  HStack,
-  Heading,
-  Image,
-  Link,
-  Text,
-  VStack,
-} from '@chakra-ui/react'
+import { Box, HStack, Image, Link, Text, VStack } from '@chakra-ui/react'
 import { useTranslation } from 'react-i18next'
 
-import { DrawLogoIcon, Logo1Icon } from '@components'
+import { Logo1Icon } from '@components'
 import { store } from '@constants'
 
 export const HomeBanner = () => {
@@ -41,12 +33,12 @@ export const HomeBanner = () => {
             }}
           />
           <VStack align="flex-start" spacing={0}>
-            <Heading textStyle="LargeTitle/Semibold" as="h1" color="white">
+            <Text textStyle="LargeTitle/Semibold" as="h1" color="white">
               {t('home.banner.share-notes')}
-            </Heading>
-            <Heading textStyle="LargeTitle/Semibold" as="h1" color="white">
+            </Text>
+            <Text textStyle="LargeTitle/Semibold" as="h1" color="white">
               {t('home.banner.share-memories')}
-            </Heading>
+            </Text>
           </VStack>
           <HStack spacing={2}>
             <Link href={store.appStore} isExternal>
